@@ -71,22 +71,22 @@ function Dashboard({ data }) {
   return (
 
     <>
-      <h1 className="chart-heading">Line Chart</h1>
+      <h3 className="chart-heading" color="#1A374D">Shows winner of the match of that day</h3>
       <ResponsiveContainer width="80%" aspect={3}>
         <LineChart data={data} height={300} margin={{ top: 5, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="date" interval={'preserveStartEnd'} />
           <YAxis />
-          <Tooltip contentStyle={{ backgroundColor: 'yellow' }} />
+          <Tooltip contentStyle={{ backgroundColor: '#E9D5CA' }} />
           <Legend />
-          <Line type="monotone" dataKey="winner" stroke="red" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="win_by_wickets" stroke="green" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="team1" stroke="blue" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="team2" stroke="black" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="winner" stroke="#3330E4" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="win_by_wickets" stroke="#F637EC" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="team1" stroke="#06283D" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="team2" stroke="#371B58" activeDot={{ r: 8 }} />
         </LineChart>
       </ResponsiveContainer>
 
-      <h1 className="chart-heading">Area Chart</h1>
+      <h3 className="chart-heading" style={{textAlign:'center'}}>Shows number of runs and wickets won by a team on a particular day</h3>
       <ResponsiveContainer width="80%" aspect={3}>
         <AreaChart
           height={300}
@@ -101,13 +101,13 @@ function Dashboard({ data }) {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Area type="monotone" dataKey="win_by_runs" stroke="#8884d8" fill="#8884d8" />
-          <Area type="monotone" dataKey="win_by_wickets" stroke="#8884d8" fill="yellow" />
+          <Area type="monotone" dataKey="win_by_runs" stroke="#4C3F91" fill="#5584AC" />
+          <Area type="monotone" dataKey="win_by_wickets" stroke="#9C19E0" fill="#88E0EF" />
         </AreaChart>
       </ResponsiveContainer>
-
+      <h3 className="chart-heading" style={{textAlign:'center'}}>Shows Percentage of win for a particular team</h3>
       <ResponsiveContainer width="100%" aspect={3}>
-        <PieChart width={400} height={400}>
+        <PieChart  >
           <Pie
             data={piedata}
             labelLine={false}
@@ -115,12 +115,6 @@ function Dashboard({ data }) {
             outerRadius={150}
             fill="#8884d8"
             dataKey="value"
-            margin={{
-              top: 5,
-              bottom: 50,
-              left: 50,
-              right: 50,
-            }}
           >
             {data.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />

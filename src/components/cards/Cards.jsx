@@ -9,22 +9,24 @@ export default function Cards({ data }) {
   const classes = useStyles();
   return (
     <Box>
-      {data.length === 0 ? 
-      <Box><Paper elevation={5} className={classes.noData}><Typography className={classes.paper}>Click on any cell to know score</Typography></Paper></Box> : <Paper elevation={5} className={classes.cardStyle}>
-        <Box className={classes.data}>
-          <Box className={classes.left}>
-            <Typography className={classes.Team}>{team1} vs {team2}</Typography>
-            <Typography className={classes.won}>won by {win_by_runs} and {win_by_wickets} wickets</Typography>
+      {data.length === 0 ?
+        <Box><Paper elevation={5} className={classes.noData}><Typography className={classes.paper}> Click on any cell to know score </Typography></Paper></Box> : <Paper elevation={15} className={classes.cardStyle}>
+          <Box className={classes.data}>
+            <Box className={classes.left}>
+              <Typography className={classes.Team}><span className={classes.match}>Match:</span>  {team1} <span className={classes.span}>vs</span>  {team2}</Typography>
+              <Typography className={classes.won}>won by <span className={classes.span}> {win_by_runs} </span>runs and <span className={classes.span}> {win_by_wickets} </span> wickets</Typography>
+            </Box>
+            <Box className={classes.verticalLine}></Box>
+            <Box className={classes.right}>
+              <Typography className={classes.result}><span className={classes.match}>Winner: </span><span className={classes.span}> {winner}</span></Typography>
+              <Typography className={classes.Date}><span className={classes.match}>Date:</span> <span className={classes.span}> {date}</span></Typography>
+            </Box>
           </Box>
-          <Box className={classes.right}>
-            <Typography className={classes.result}>{winner}</Typography>
-            <Typography className={classes.Date}>{date}</Typography>
+          <Box className={classes.verticalLineMarin}></Box>
+          <Box className={classes.player}>
+          <span className={classes.match}>Man of Match </span><span className={classes.span}> {player_of_match}</span>
           </Box>
-        </Box>
-        <Box className={classes.player}>
-          {player_of_match}
-        </Box>
-      </Paper>}
+        </Paper>}
     </Box>
   );
 }

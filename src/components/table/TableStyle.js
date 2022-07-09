@@ -6,7 +6,7 @@ theme = responsiveFontSizes(theme);
 
 const useStyles = makeStyles((arg) => ({
   tableStyle: {
-    height: '200vh',
+    
     width: '100vw',
     margin:'20px',
     display:'flex',

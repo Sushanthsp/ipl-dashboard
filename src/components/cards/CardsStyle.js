@@ -14,6 +14,29 @@ const useStyles = makeStyles((arg) => ({
         juustifyContent:'center',
         textAlign:'center'
     },
+    match:{
+      color:'#303f9f',
+      textAlign:'center',
+      "&&:hover": {
+        color:"#fff !important",
+      },
+      "&&:focus": {
+        color:"#fff !important"
+      }
+    },
+    verticalLine:{
+      height: '130px',
+      borderRight: '2px solid',
+    },
+    verticalLineMarin:{
+      height: '130px',
+      borderRight: '2px solid',
+      marginTop:'8px'
+    },
+    span:{
+      fontWeight:'bold',
+      textAlign:'center'
+    },
     paper:{
     textAlign: 'center',
     width: '100%',
@@ -23,6 +46,9 @@ const useStyles = makeStyles((arg) => ({
     boxSizing: 'border-box',
     display:'flex',
     justifyContent:'space-around',
+    background: '#fff',
+    color: 'black',
+    borderRadius: '25px',
     "&&:hover": {
       border: '2px solid #303f9f !important',
       color:"#303f9f !important",
@@ -44,7 +70,8 @@ const useStyles = makeStyles((arg) => ({
     display:'flex',
     width:'20%',
     alignItems:'center',
-    justifyContent:'center'
+    justifyContent:'center',
+    flexDirection:'column',
   },
   left:{
     display:'flex',
@@ -71,9 +98,9 @@ const useStyles = makeStyles((arg) => ({
       margin: '10px !important',
       display:'flex',
     },
-    number:{
-      
-    }
+    verticalLineMarin:{
+      marginTop:'35px'
+    },
   },
   [theme.breakpoints.up("sm")]: {
     cardStyle: {
