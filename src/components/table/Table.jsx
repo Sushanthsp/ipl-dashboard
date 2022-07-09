@@ -15,8 +15,8 @@ const columns = [
   // { field: 'toss_decision', headerName: 'Toss Decision', width: 130 },
   { field: 'result', headerName: 'result', width: 130 },
   { field: 'winner', headerName: 'winner', width: 130 },
-  { field: 'win_by_runs', headerName: 'Win By Runs', type: 'number', width: 90, },
-  // { field: 'win_by_wickets', headerName: 'Win By Wickets:', type: 'number', width: 90, },
+  { field: 'win_by_runs', headerName: 'Win By Runs', type: 'number', width: 140, },
+  { field: 'win_by_wickets', headerName: 'Win By Wickets:', type: 'number', width: 140, },
   // { field: 'player_of_match', headerName: 'Player Of Match', width: 130 },
   // { field: 'venue', headerName: 'Venue', width: 130 },
   // {
