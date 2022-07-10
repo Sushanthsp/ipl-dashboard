@@ -96,26 +96,6 @@ console.log(nameValueSecond)
           <Area type="monotone" dataKey="win_by_wickets" stroke="#9C19E0" fill="#88E0EF" />
         </AreaChart>
       </ResponsiveContainer>
-      <h3 className="chart-heading" style={{textAlign:'center'}}>Shows Percentage of win for a particular team</h3>
-      <ResponsiveContainer width="100%" aspect={3}>
-        <PieChart  >
-          <Pie
-            data={nameValueFirst}
-            labelLine={false}
-            label={renderCustomizedLabel}
-            outerRadius={150}
-            fill="#8884d8"
-            dataKey="value"
-          >
-            {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
-              
-          </Pie>
-          <Tooltip contentStyle={{ backgroundColor: 'yellow' }} />
-        </PieChart>
-        
-      </ResponsiveContainer>
       <h3 className="chart-heading" style={{textAlign:'center'}}>Graph shows percentage of wins for a particular team in seven matches</h3>
       <ResponsiveContainer width="100%" aspect={3}>
         <PieChart  >
@@ -136,6 +116,27 @@ console.log(nameValueSecond)
         </PieChart>
         
       </ResponsiveContainer>
+      <h3 className="chart-heading" style={{textAlign:'center'}}>Shows Percentage of win for a particular team since the start of the season</h3>
+      <ResponsiveContainer width="100%" aspect={3}>
+        <PieChart  >
+          <Pie
+            data={nameValueFirst}
+            labelLine={false}
+            label={renderCustomizedLabel}
+            outerRadius={150}
+            fill="#8884d8"
+            dataKey="value"
+          >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            ))}
+              
+          </Pie>
+          <Tooltip contentStyle={{ backgroundColor: 'yellow' }} />
+        </PieChart>
+        
+      </ResponsiveContainer>
+     
 
     </>
 
