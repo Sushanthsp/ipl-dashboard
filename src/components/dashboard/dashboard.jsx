@@ -120,7 +120,7 @@ console.log(nameValueSecond)
       <ResponsiveContainer width="100%" aspect={3}>
         <PieChart  >
           <Pie
-            data={nameValueFirst}
+            data={nameValueSecond}
             labelLine={false}
             label={renderCustomizedLabel}
             outerRadius={150}
