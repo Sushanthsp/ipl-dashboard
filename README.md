@@ -18,7 +18,7 @@
 # Features of this web app
 
   1. One can play with data using tables and same can be visualised in charts - this feature is added because rendering all the data at one go doesn't enhace user experience so using tables, pagination can be used and user can get specific and detailed view of that season.
-  2. This chart shows the percentage of wins for all teams since the start of the season - User can analyse the highest number of wins for the team sine the start of seaon
+  2. Pie chart used in this peoject shows the percentage of wins for all teams in a particular weeek and the whoe season - User can analyse the highest number of wins for the team sine the start of seaon and in that particular week
   3. The details of each row are displayed on clicking the cells in the table- We cannot render every data on table so clicking on table renders data in separate card which again enhances user experience
   4. When hovered over the graph, details about that instance are displayed - To Provide an enhanced user experience
   
