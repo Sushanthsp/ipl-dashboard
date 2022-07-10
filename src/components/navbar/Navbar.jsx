@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import SportsCricketIcon from '@mui/icons-material/SportsCricket';
 
 export default function Navbar() {
   return (
@@ -12,7 +12,7 @@ export default function Navbar() {
       <AppBar position="static" sx={{m:'auto'}}>
         <Toolbar variant="dense" sx={{m:'auto'}}>
           <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-            <MenuIcon />
+            <SportsCricketIcon />
           </IconButton>
           <Typography variant="h6" color="inherit" component="div">
             IPL Dashboard
